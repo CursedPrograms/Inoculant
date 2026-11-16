@@ -1,0 +1,38 @@
+Inoculant
+Copyright (c) 2026 Cursed Entertainment. MIT License (see LICENSE): Inoculant's own code.
+
+Methods (Inoculant is its own C++ code; no code was copied from the projects below, only their published ideas):
+  PGD - Madry et al., "Towards Deep Learning Models Resistant to Adversarial Attacks" (2018)
+  MI-FGSM - Dong et al., "Boosting Adversarial Attacks with Momentum" (2018)
+  EOT - Athalye et al., "Synthesizing Robust Adversarial Examples" (2018)
+  Feature squeezing - Xu et al., "Feature Squeezing: Detecting Adversarial Examples in Deep Neural Networks" (2018)
+  JPEG / spatial smoothing / Gaussian augmentation defences - as collected in IBM's Adversarial Robustness Toolbox
+      (https://github.com/Trusted-AI/adversarial-robustness-toolbox, MIT)
+  Disrupting image-translation deepfakes with adversarial perturbations - Ruiz et al. (2020),
+      https://github.com/natanielruiz/disrupting-deepfakes (no licence given: the idea only, nothing of its code)
+  Detecting and removing Nightshade-style poison - NightshadeAntidote by Richard Aragon
+      (https://github.com/RichardAragon/NightshadeAntidote, MIT)
+  Identity cloaking against face recognition - Fawkes (Shan et al., 2020), LowKey (Cherepanova et al., 2021)
+
+Planned modules (not in this version) and their licences, to keep in mind: shieldfont (isaqueseneda, AGPL-3.0) and
+miasma (austin-weeks, GPL-3.0) can't be copied into an MIT project: Inoculant's text tools will be written fresh from
+their ideas, or run them as separate programs. OWASP Agent Memory Guard: Apache-2.0.
+
+The model is NOT part of Inoculant. ArcFace w600k_r50 is fetched on first use from FaceFusion's model releases
+(https://github.com/facefusion/facefusion-assets/releases) if it isn't on the PC already; so are the face detector
+and landmarkers (RetinaFace/SCRFD det_10g, 2DFAN4, FAN 68/5):
+  det_10g and w600k_r50 - InsightFace (https://github.com/deepinsight/insightface): the code is MIT; the pretrained
+      models are for NON-COMMERCIAL research use
+  2DFAN4 - Adrian Bulat (https://github.com/1adrianb/face-alignment): BSD-3-Clause
+  FAN 68/5 - FaceFusion
+Inoculant writes its own "gradient graph" from w600k_r50 on the PC it runs on (w600k_r50_grad.onnx: the same
+weights, run backwards as well); it keeps the model's licence and isn't shipped.
+
+The face detection and alignment code is shared with Mimic (Cursed Entertainment), which follows FaceFusion
+(https://github.com/facefusion/facefusion, Henry Ruhs and contributors).
+
+Runs on ONNX Runtime (Microsoft, MIT) with DirectML (Microsoft, MIT). Window: SDL2 (zlib), Dear ImGui (MIT);
+pictures: stb (MIT / public domain).
+
+Use it on your own pictures, or on pictures of people who agreed. It is a protective tool: don't use it to hide
+or forge anyone else's identity.

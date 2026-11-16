@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inoculant - poisons and antidotes for your own pictures</title>
+  <meta name="description" content="Inoculant: an almost invisible identity cloak for the faces in your own photos, against face recognition and face swaps, and antidotes to test how much of it survives. Pure C++, part of Atelier.">
+  <link rel="icon" href="site/favicon.ico">
+  <link rel="stylesheet" href="site/style.css">
+</head>
+
+<body>
+  <header class="top">
+    <img class="logo" src="site/logo.png" alt="Inoculant">
+    <div>
+      <h1>Inoculant</h1>
+      <p class="tag">Poisons and antidotes for your own pictures. Part of
+        <a href="https://github.com/CursedPrograms/Atelier">Atelier</a>.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="shot">
+      <img src="images/window.jpg" alt="Inoculant: the Poison tab and the before/after wipe">
+    </section>
+
+    <section class="actions">
+      <a class="btn" href="https://github.com/CursedPrograms/Inoculant/releases">Download</a>
+      <a class="btn quiet" href="https://github.com/CursedPrograms/Inoculant">Get it on GitHub</a>
+    </section>
+
+    <p class="note">A protective tool: use it on pictures of yourself, or of people who agreed. A cloak is a speed bump,
+      not a guarantee.</p>
+
+    <section class="grid" id="features"></section>
+
+    <section class="keys">
+      <h2>Tested</h2>
+      <p>On AI-generated test faces, default settings (strength 4 of 255), on the GPU through DirectML:</p>
+      <table class="numbers" id="numbers"></table>
+    </section>
+
+    <section class="shot">
+      <img src="images/antidote.jpg" alt="The Antidote tab: the robustness test, the inspection and the difference heat-map">
+    </section>
+
+    <section class="keys">
+      <h2>The command line</h2>
+      <p><kbd>inoculant-cli protect me.jpg me_protected.png</kbd> <kbd>inoculant-cli test me.jpg me_protected.png --all</kbd>
+        <kbd>inoculant-cli inspect picture.jpg</kbd></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Methods: PGD, MI-FGSM, EOT, feature squeezing. ArcFace is InsightFace's (non-commercial research use).</p>
+    <p>Farica&#9734;Kimora &copy; <a href="https://cursed-entertainment.itch.io/">Cursed Entertainment</a> <span id="year">2026</span></p>
+  </footer>
+  <script src="site/site.js"></script>
+</body>
+
+</html>
