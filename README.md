@@ -175,6 +175,10 @@ The code, in `src/`:
 - **Transfer test:** a second recogniser in the Antidote tab, to measure how far a cloak made against one model
   carries to another; ensembles in the cloak.
 - **Swap test:** run a face swap from the protected picture (through Mimic) and show it next to one from the original.
+- **Video:** the cloak on every frame of a video. Frames protected one by one flicker, so the change is carried from frame
+  to frame (each frame starts from the last one's cloak, following the face) and smoothed over time. Video encoding
+  washes off more than a PNG does, so it needs a high-quality encode and the Robustness setting up; expect less
+  protection than on a still. Then Mimic's and Mosaic Mask's video output get it too.
 - **Deepfake disruption** against image-translation models (after Ruiz et al.'s disrupting-deepfakes).
 - **Diffusion purification** in Antidote (the strongest known wash), and batches of folders.
 - **Text and agent modules** (later): font-level text protection after shieldfont, anti-scraper text after miasma,
