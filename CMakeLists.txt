@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(Inoculant VERSION 0.1.0 LANGUAGES C CXX)
+project(Inoculant VERSION 1.0.0 LANGUAGES C CXX)
 # Inoculant: poisons and antidotes for your own pictures, in C++. Part of Atelier.
 #   Inoculant      the window (SDL2, OpenGL 3, Dear ImGui)
 #   inoculant-cli  the command line
